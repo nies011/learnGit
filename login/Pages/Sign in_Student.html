@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>注册新用户</title>
+<script src="../Resources/js/jquery/2.0.0/jquery.min.js"></script>
+<link href="../Resources/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+<script src="../Resources/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+<link href="../Resources/css/sign in.css" rel="stylesheet">
+<script src="../Resources/js/func.js"></script>
+</head>
+
+<body>
+
+	<div class="guide">
+		<img src="../Resources/img/logoWhite.png" style="height:50px; margin-bottom:17px; position: relative; top: 10px;right: 20px">
+		<ul>
+			<li style="border-bottom: 1px solid #fff">
+				<a href="Index.html">首页</a>
+			</li>
+			<li><a>|</a></li>
+			<li>
+				<a class="a1">
+					&nbsp; <img src="../Resources/img/Headphone.png"> &nbsp; <font style="position: relative; bottom: 3px">服务中心 &nbsp;</font>
+				</a>
+				<ul class="u1">
+					<li style="margin-top: 8px"><a href="#none">学生问题咨询</a></li>
+					<li style="margin-top: -11px"><a href="#none">老师问题咨询</a></li>
+					<li style="margin-top: -11px"><a href="#none">论坛中心</a></li>
+					<li style="margin-top: -11px"><a href="http://www.nenu.edu.cn/">学校官网</a></li>
+					<li style="margin-top: -11px"><a href="#none">联系管理员</a></li>
+				</ul>
+			</li>
+			<li><a>|</a></li>
+			<li>
+				<a class="a1"> &nbsp; &nbsp;服务电话 &nbsp; &nbsp;</a>
+				<ul class="u2">
+					<li style="margin-top: 8px"><a href="#none">1550442580</a></li>
+					<li style="margin-top: -11px"><a href="#none">18085678941</a></li>
+					<li style="margin-top: -11px"><a href="#none">15245245689</a></li>
+					<li style="margin-top: -11px"><a href="#none">64517777</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="info">
+    	<div class="zhuce">
+    	<p align="center">学生用户注册</p>
+        </div>
+        <div class="teacher">
+        <br>
+        我是教师，<a href="Sign in_Teacher.html" class="link">注册教师用户</a>
+        <br>
+        </div>
+		<div class="tianru">
+		<div class="panel panel-info">
+			<div class="panel-heading">注册信息</div>
+			<div class="panel-body">
+				<div class="xinxi">
+					<form action="Log in_Student.html" method="post">
+					邮箱<font color="red">*</font>
+					<input type="email" class="form-control" placeholder="可用于找回密码">
+					<br>
+					昵称<font color="red">*</font>
+					<input type="text" class="form-control" placeholder="可用于登录">
+					<br>
+ 					密码<font color="red">*</font>
+					<input type="password" class="form-control" placeholder="请设置密码">
+					<br>
+					确认密码<font color="red">*</font>
+					<input type="password" class="form-control" placeholder="请再次输入密码">
+					<br>					
+					姓名
+					<input type="text" class="form-control" placeholder="方便你的老师找到你">
+					<br>
+					性别
+                    <br>
+					<div class="btn-group" data-toggle="buttons">
+ 					 <label class="btn btn-default">
+ 				   <input type="radio" checked>男
+ 					 </label>
+ 					 <label class="btn btn-default">
+ 					   <input type="radio" >女
+					  </label>
+					</div>
+					<br><br>
+					学校
+					<input type="text" class="form-control" placeholder="请输入你的学校">
+					<br>
+					专业
+					<input type="text" class="form-control" placeholder="请输入你的专业">
+					<br>
+					年级
+					<select class="form-control">
+      				  <option>请选择一项</option>
+ 					  <option>大一</option>
+ 					  <option>大二</option>
+ 					  <option>大三</option> 					  
+ 					  <option>大四</option>
+					</select>	
+					<br>
+
+					学号				
+					<input type="text" class="form-control" placeholder="请输入你的学号">
+					<br>
+
+					<input type="checkbox" class="" value="">&nbsp;&nbsp;我已阅读并接受
+					<a href="#" class="term">用户许可协议</a>
+					<br>
+					<br>
+					<input type="submit" class="btn btn-info btn-block" value="注册账号" onclick="register()"> 
+					</form>
+                
+				</div>
+				<div class="account">
+					<img src="../Resources/img/account.png"/>
+       				<p class="mass">学生和老师的考试信息查看、整理的好工具，提高效率，增加质量，让考试和学习，更加方便快捷</p>
+        	        <div class="log">
+					已有账号？请<a class="in" href="Log in_Student.html">登录</a>
+					</div>
+				</div>  
+ 			</div>
+		</div>
+		</div>
+	</div>
+	<div class="footer">	
+		<img src="../Resources/img/nenulogo.png" alt="" class="T">
+		<div class="contact">
+			<div class="phone">
+				<img src="../Resources/img/phone.png" alt="">
+				<span class="phonenumber">6666-6666-666</span>
+			</div>
+			<div class="com">
+				<img src="../Resources/img/email.png" alt="">
+				<span class="comnumber">webmaster@nenu.edu.cn</span>
+			</div>
+			<div class="add">
+				<img src="../Resources/img/add.png" alt="">
+				<span class="comnumber">吉林省长春市南关区人民大街5268号（130024）</span>
+			</div>
+		</div>
+		<div class="information">	
+			<div>COPYRIGHT © 2004-2010</div>
+			<br>	
+			<div>网站建设：软件工程一体化小组</div>
+			<br>	
+			<div>版权所有©东北师范大学 吉ICP备05004942</div>
+			<br>	
+			<div>维护：信息化管理与规划办公室</div>
+		</div>
+	</div>
+</body>
+</html>

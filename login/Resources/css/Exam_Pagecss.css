@@ -1,0 +1,332 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+body{
+	margin:0;
+	min-width: 1400px;
+}
+
+body,html{
+  scroll-behavior: smooth;
+}
+/*.tlogo{
+	width: 20px;
+	height: 20px;
+}*/
+.col-sm-7{
+	padding-top: 30px;
+}
+
+.card2{
+	position: fixed;
+	top: 110px;
+	right: 50px;
+	z-index: 1;
+}
+.tlogoimg{
+	width: 240px;
+	height: 60px;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 20px;
+}
+.left-side .list-group-item{
+	border: none;
+	border-radius: 3px;
+	margin-bottom: 5px;
+}
+
+.left-side .list-group-item:hover{
+	background-color: #1d2b36;
+	color: #eee;
+	cursor:pointer;
+}
+
+.btn-danger{
+	margin-left: 15px;
+}
+
+.changepage{
+	width: 200px;
+	height: 50px;
+	background-color: red;
+	margin: 0 auto;
+}
+
+.footer{
+	width: 100%;
+	height: 200px;
+	background-color: #eaeaea;
+	position: absolute;
+	top: 2500px;
+	margin: 0 auto;
+}
+
+.T{
+	float: left;
+	width: 350px;
+	height: 100px;
+	margin-top: 50px;
+	margin-left: 120px;
+	border-radius: 30px;
+}
+
+.contact{
+	float: left;
+	margin-left: 150px;
+	width: 35%;
+	height: 100%;
+	margin-top: 20px;
+}
+
+.contact>div{
+	width: 100%;
+	height: 50px;
+	margin-right: 50px;
+}
+
+.contact>div>img{
+	height: 30px;
+	width: 30px;
+	border-radius: 200px;
+	position: relative;
+}
+
+.contact>div>img:hover{
+	height: 30px;
+	width: 30px;
+	cursor:pointer;
+	border-radius: 200px;
+	background-color: #0e6281;
+	transition-duration: 0.5s;
+}
+
+.contact>div>span{
+	margin-left: 10px;
+	line-height: 50px;
+}
+
+.aboutus,.help{
+	width: 100px;
+	height: 40px;
+	border: 3px solid #999;
+	background-color: #c9c7c7;
+	border-radius: 20px;
+	color: #6a6666;
+	position: absolute;
+	
+	text-align: center;
+	line-height: 40px;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.aboutus{
+	right: 240px;
+	top: 25px;
+}
+
+.help{
+	right: 240px;
+	top: 110px;
+}
+.aboutus:hover,.help:hover{
+	color: #000;
+	border: 3px solid #000;
+	background-color: #666;
+	transition-duration: 0.5s;
+	cursor:pointer;
+}
+/*-------------------------------底部         over-------------------------------*/
+.information{
+	margin-top: 30px;
+	margin-right: 50px;
+}
+
+.problemkinds{
+	margin-left: 210px;
+}
+
+.gapFilling,.choiceQuestion,.answerQuestion{
+	margin-top: 30px;
+}
+
+.submitButton{
+	width: 80px;
+	height: 30px;
+	font-size: 10px;
+	text-align: center;
+	line-height: 50px;
+}
+
+.page1{
+	margin-top: 20px;
+}
+
+.side-bar-card1{
+	background: rgba(0,0,0,.05);
+	/*margin-top: 15px;*/
+	/*padding: 20px 0;*/
+	height: 100px;
+	margin-bottom: 15px;
+	margin-top: 20px;
+}
+
+.card2{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 400px;
+	background: rgba(0,0,0,.05);
+
+}
+
+.text1{
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+.side-bar-card .card-title,
+.side-bar-card .card-body .list .item{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.side-bar-card .card-body .list .item{
+	margin-bottom: 10px;
+}
+.card2 .card-title{
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.text-title{
+	margin-bottom: 5px;
+}
+
+.item:hover{
+	background-color: #ddd;
+	cursor: pointer;
+}
+
+.desc{
+	color: #999;
+}
+
+.report{
+	margin-top: 5px;
+}
+
+.hello{
+	float: right;
+	margin-top: 15px;
+}
+/*-------------------------------------------------------------*/
+.checkimg{
+	float: right;
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+	margin-bottom: 5px;
+}
+
+.checkimg:hover{
+	background-color: #bbb;
+	transition-duration: 0.5s;
+}
+
+.submitPaper{
+	margin-left: 100px;
+}
+
+.saveanswer{
+	width: 80px;
+}
+
+.beat{
+	margin-left: 220px;
+}
+
+#accordion{
+	margin-top: 50px;
+}
+
+.left{
+	background-color: #eee;
+	width: 100%;
+	height: 200px;
+	border-radius: 3px;
+	padding-left: 10px;
+	padding-top: 10px;
+	margin-top: 30px;
+}
+.left>div{
+	width: 100%;
+	height: 50px;
+}
+
+.left>div>img{
+	float: left;
+	width: 20px;
+	height: 20px;
+}
+
+.left>div>p{
+	float: left;
+	margin-left: 9px;
+	font-size: 13px;
+}
+
+.pro-number>div>a{
+	display: block;
+	float: left;
+	width: 40px;
+	height: 20px;
+	background-color: #ddd;
+	margin-left: 5px;
+	margin-top: 5px;
+	text-decoration-line: none;
+	text-align: center;
+}
+
+.pro-number>div>a:hover{
+	background-color: #ccc;
+	cursor: pointer;
+}
+
+.count-down{
+	width: 100%;
+	height: 80px;
+	/*background-color: red;*/
+	margin-top: 80px;
+	font-size: 20px;
+	/*border: 2px solid #000;*/
+	border-radius: 5px;
+}
+
+.extra-time{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.Exam-Page-submit{
+	display: block;
+	width: 100px;
+	height: 30px;
+	font-size: 15px;
+	background-color: #337ab7;
+	color: #fff;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 30px;
+	line-height: 30px;
+	border-radius: 10px;
+}
+
+.Exam-Page-submit:hover{
+	color: #fff;
+	background-color: #235987;
+	text-decoration-line: none;
+}

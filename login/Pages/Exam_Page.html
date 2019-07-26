@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exam-Page</title>
+	<link rel="shortcut icon" href="../Resources/img/nenulogo.png" type="image/x-icon" /> 
+	<link rel="stylesheet" href="../Resources/css/bootstrap/3.3.7/bootstrap.min.css">
+	<link rel="stylesheet" href="../Resources/css/Exam_Pagecss.css">
+	<script src="../Resources/js/jquery/2.1.4/jquery.min.js"></script>
+	<script src="../Resources/js/jquery/2.0.0/jquery.min.js"></script>
+	<link href="../Resources/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+	<script language="javascript">
+    window.onload = function ()
+    {
+    var oCountDown = document.getElementById("countdown");
+    var aInput = oCountDown.getElementsByTagName("input")[0];
+    var timer = null;
+    aInput.onclick = function ()
+        {
+            this.className == "" ? (timer = setInterval(updateTime, 1000), updateTime()) : (clearInterval(timer));
+            this.className = this.className == '' ? "cancel" : '';
+        };
+    function format(a)
+        {
+            return a.toString().replace(/^(\d)$/,'0$1');
+        }
+    function updateTime ()
+        {
+            var aSpan = oCountDown.getElementsByTagName("span");
+            var oRemain = aSpan[0].innerHTML.replace(/^0/,'') * 60 + parseInt(aSpan[1].innerHTML.replace(/^0/,''));
+            if(oRemain <= 0)
+        {
+            clearInterval(timer);
+            return;
+        }
+            oRemain--;
+            aSpan[0].innerHTML = format(parseInt(oRemain / 60));
+            oRemain %= 60;
+            aSpan[1].innerHTML = format(parseInt(oRemain));
+        }
+        // 加上此句即可。
+        aInput.click();
+    }
+    </script>
+	<script src="../Resources/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+	<!-- <link href="../Resources/css/default.css" rel="stylesheet" type="text/css" /> -->
+
+		
+
+	<script src="../Resources/js/jquery.js" type="text/javascript"></script>
+
+	<script src="../Resources/js/raphael.js" type="text/javascript"></script>
+
+	<script src="../Resources/js/init.js" type="text/javascript"></script>
+	<script>
+        // jQuery
+        $(document).ready(function () {
+            $("#left-side-item1").click(function () {
+                $(".page1").show();// 显示
+                $(".page2").hide();// 隐藏
+                $(".page3").hide();
+                $(".page4").hide();
+                $(".wrong-pro").hide();
+            });
+            $("#left-side-item2").click(function () {
+                $(".page1").hide();
+                $(".page2").show();
+                $(".page3").hide();
+                $(".page4").hide();
+                $(".wrong-pro").hide();
+            });
+            $("#left-side-item3").click(function () {
+                $(".page1").hide();
+                $(".page2").hide();
+                $(".page3").show();
+                $(".page4").hide();
+                $(".wrong-pro").hide();
+            });
+            $("#left-side-item4").click(function () {
+                $(".page1").hide();
+                $(".page2").hide();
+                $(".page3").hide();
+                $(".page4").show();
+                $(".wrong-pro").hide();
+            });
+              $(".wrong-btn").click(function () {
+                $(".page1").hide();
+                $(".page2").hide();
+                $(".page3").hide();
+                $(".page4").hide();
+                $(".wrong-pro").show();
+            });
+        });
+    </script>
+    <script>
+        // jQuery
+        $(document).ready(function () {
+            $("#gap").click(function () {
+                $(".gapFilling").show();// 显示
+                $(".choiceQuestion").hide();// 隐藏
+                $(".answerQuestion").hide();
+            });
+            $("#choice").click(function () {
+                $(".gapFilling").hide();// 显示
+                $(".choiceQuestion").show();// 隐藏
+                $(".answerQuestion").hide();
+            });
+            $("#answer").click(function () {
+                $(".gapFilling").hide();// 显示
+                $(".choiceQuestion").hide();// 隐藏
+                $(".answerQuestion").show();
+            });
+        });
+    </script>
+    <script language="javascript"> 
+	    function submitPage() { 
+	        if (!confirm("确认要提交试卷吗？")) { 
+	            window.event.returnValue = false; 
+	        } 
+	    } 
+	</script>
+	<script language="javascript"> 
+	    function saveAnswer() { 
+	        if (!confirm("确认要保存答案吗？")) { 
+	            window.event.returnValue = false; 
+	        } 
+	    } 
+	</script>
+</head>
+<body>
+	<div class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<img src="../Resources/img/nenulogo.png" alt="" class="tlogoimg">
+			</div>
+			<div class="btn-group hello">
+			    <button type="button" class="btn btn-primary dropdown-toggle "  data-toggle="dropdown">
+			     你好，张三！
+			      <span class="caret"></span>         
+			    </button>
+			    <ul class="dropdown-menu" role="menu">
+			      <li>
+			         <a href="Index.html">退出登录</a>            
+			      </li>
+			      <li role="presentation">
+			         <a href="#">更多详情+</a>             
+			      </li>
+			    </ul>
+			</div>   
+	    </div>		
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+				<div class="left">
+					<div class="student">
+						<img src="../Resources/img/student-img.png" alt="">
+						<p>考生姓名：张小三</p>
+					</div>
+					<div class="teacher">
+						<img src="../Resources/img/teacher-img.png" alt="">
+						<p>任课教师：李小四</p>
+					</div>
+					<div class="lesson">
+						<img src="../Resources/img/lesson-img.png" alt="">
+						<p>科目：数字电路技术</p>
+					</div>
+					<div class="time">
+						<img src="../Resources/img/time-img.png" alt="">
+						<p>考试时长：100 min</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-7">
+				<div class="panel panel-info">
+				  <div class="panel-heading">一.填空题</div>
+				</div>
+				<div class="gapFilling">
+						<div class="panel panel-default" id="pro1">
+							<div class="panel-heading">1. 函数Y=AB+AC有3个输入变量，则Y 的最小项表达式为______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题一：函数Y=AB+AC有3个输入变量，则Y 的最小项表达式为______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div>
+						    		</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" id="pro2">2. 一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div>
+						    		</div>
+								</div>
+							</div>
+						</div>						
+						<div class="panel panel-default">
+							<div class="panel-heading" id="pro3">3. 将十进制数287转换成二进制数是______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题三：将十进制数287转换成二进制数是______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div>
+						    		</div>
+								</div>
+							</div>
+						</div>						
+						<div class="panel panel-default">
+							<div class="panel-heading" id="pro4">4. 把高电压作为逻辑1，低电平作为逻辑0的赋值方法称作______逻辑赋值。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题四：把高电压作为逻辑1，低电平作为逻辑0的赋值方法称作______逻辑赋值。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div>
+						    		</div>
+								</div>
+							</div>
+						</div>						
+						<div class="panel panel-default">
+							<div class="panel-heading" id="pro5">5. 四位二进制编码器有______个输入端。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题五:四位二进制编码器有______个输入端。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div>
+						    		</div>
+								</div>
+							</div>
+						</div>	
+						<div class="panel panel-default">
+							<div class="panel-heading" id="pro6">6. 一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题六：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div>
+						    		</div>
+								</div>
+							</div>
+						</div>										
+					</div>
+					<div class="choiceQuestion">
+						<div class="panel panel-info">
+				  			<div class="panel-heading">二.选择题</div>
+						</div>
+						<div class="list-group">
+							<div type="button" class="list-group-item active" id="pro7">
+							    7. 同步时序电路和异步时序电路比较，其差异在于后者(  )。
+							    <button type="button" class="btn btn-success submitButton" onclick="saveAnswer()">保存答案</button>
+							</div>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro1">
+							A ．0000
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro1">
+							B ．1010
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro1">
+							C ．0101
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro1">
+							D ．1111
+							</button>
+						</div>
+						<div class="list-group">
+							<div type="button" class="list-group-item active"  id="pro8">
+							    8. 下列电路中，不属于组合逻辑电路的是(  )。
+							    <button type="button" class="btn btn-success submitButton" onclick="saveAnswer()">保存答案</button>
+							</div>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro2">
+							A ．译码器
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro2">
+							B ．全加器
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro2">
+							C ．寄存器
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro2">
+							D ．编码器
+							</button>
+						</div>
+						<div class="list-group">
+							<div type="button" class="list-group-item active" id="pro9">
+							    9. 同步时序电路和异步时序电路比较，其差异在于后者(  )
+							    <button type="button" class="btn btn-success submitButton" onclick="saveAnswer()">保存答案</button>
+							</div>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro3">
+							A ．没有触发器
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro3">
+							B ．没有统一的时钟脉冲控制
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro3">
+							C ．没有稳定状态
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro3">
+							D ．输出只与内部状态有关
+							</button>
+						</div>
+					</div>
+					<div class="answerQuestion">
+						<div class="panel panel-info">
+				  			<div class="panel-heading">三.简答题</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" id="pro10">10. 一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div><!-- /.modal-content -->
+						    		</div><!-- /.modal-dialog -->
+								</div>
+							</div>
+						</div>				
+						<div class="panel panel-default">
+							<div class="panel-heading" id="pro11">11. 一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div><!-- /.modal-content -->
+						    		</div><!-- /.modal-dialog -->
+								</div>
+							</div>
+						</div>				
+						<div class="panel panel-default">
+							<div class="panel-heading" id="pro12">12. 一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div><!-- /.modal-content -->
+						    		</div><!-- /.modal-dialog -->
+								</div>
+							</div>
+						</div>				
+						<div class="panel panel-default">
+							<div class="panel-heading" id="pro13">13. 一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div><!-- /.modal-content -->
+						    		</div><!-- /.modal-dialog -->
+								</div>
+							</div>
+						</div>				
+						<div class="panel panel-default">
+							<div class="panel-heading" id="pro14">14. 一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div><!-- /.modal-content -->
+						    		</div><!-- /.modal-dialog -->
+								</div>
+							</div>
+						</div>				
+					</div>
+			</div>	
+			<div class="col-sm-3">
+				<div class="side-bar-card card2">
+					<div class="card-title">题目列表</div>
+					<div class="card-body">
+						<div class="btn-group pro-number" data-toggle="buttons">
+							<div class="pro-line">
+							  	<a onclick="window.location='#pro1'">1</a>
+							  	<a onclick="window.location='#pro2'">
+							    	2
+							    </a>
+							  	<a onclick="window.location='#pro3'">
+							    	3
+							    </a>
+							  	<a onclick="window.location='#pro4'">
+							    	4
+							    </a>
+							  	<a onclick="window.location='#pro5'">
+							    	5
+							    </a>
+							</div>
+							<div class="pro-line">
+							  	<a onclick="window.location='#pro6'">
+							    	6
+							    </a>
+							  	<a onclick="window.location='#pro7'">
+							    	7
+							    </a>
+							  	<a onclick="window.location='#pro8'">
+							    	8
+							    </a>
+							  	<a onclick="window.location='#pro9'">
+							    	9
+							    </a>
+							  	<a onclick="window.location='#pro10'">
+							    	10
+							    </a>
+							</div>
+							<div class="pro-line">
+							  	<a onclick="window.location='#pro11'">
+							    	11
+							    </a>
+							  	<a onclick="window.location='#pro12'">
+							    	12
+							    </a>
+							  	<a onclick="window.location='#pro13'">
+							    	13
+							    </a>
+							  	<a onclick="window.location='#pro14'">
+							    	14
+							    </a>
+							</div>
+						</div>
+					</div>
+					<div class="count-down">
+						<div class="extra-time">剩余时间：</div>
+						<div align="center" id="countdown">
+					    	<span>100</span>分钟<span>00</span>秒
+					     
+					    	<input type="button" value="开始" style="display: none;" />
+					    </div>
+					</div>
+					<a href="Exam_Result_Page.html" class="Exam-Page-submit">提交试卷</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">	
+		<img src="../Resources/img/nenulogo.png" alt="" class="T">
+		<div class="contact">
+			<div class="phone">
+				<img src="../Resources/img/phone.png" alt="">
+				<span class="phonenumber">6666-6666-666</span>
+			</div>
+			<div class="com">
+				<img src="../Resources/img/email.png" alt="">
+				<span class="comnumber">webmaster@nenu.edu.cn</span>
+			</div>
+			<div class="add">
+				<img src="../Resources/img/add.png" alt="">
+				<span class="comnumber">吉林省长春市南关区人民大街5268号（130024）</span>
+			</div>
+		</div>
+		<div class="information">	
+			<div>COPYRIGHT © 2004-2010</div>
+			<br>	
+			<div>网站建设：软件工程一体化小组</div>
+			<br>	
+			<div>版权所有©东北师范大学 吉ICP备05004942</div>
+			<br>	
+			<div>维护：信息化管理与规划办公室</div>
+		</div>
+	</div>
+</body>
+</html>

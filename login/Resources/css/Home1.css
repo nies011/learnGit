@@ -1,0 +1,137 @@
+﻿body{
+	margin:0;
+	min-width: 1400px;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+div.guide{
+	width:100%;
+	min-width: 1000px;
+	margin:0 auto;
+	height:70px;
+	background: #5d819dc9;
+	position: fixed;
+	top:0px;
+	left: 0px;
+	z-index: 1;
+	text-align: center;
+}
+div.guide ul{
+	width:500px;
+	font-size:14px;
+	color:#fff; 
+	display: inline-block;
+	margin-left: 210px;
+	position: relative;
+	bottom: 3px;
+	left:90px;
+}
+div.guide ul li{
+	margin:10px;
+	text-align: center;
+	list-style: none;
+	float: left;
+}
+div.guide ul a{
+	height:24px;
+	display: inline-block;
+	padding-top: 5px;
+	border-radius: 15px;
+	cursor:pointer;
+	color:#fff;
+}
+a.a1{
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+}
+div.guide ul li a.a1:hover{
+	background: rgba(255,255,255,0.3);
+}
+div.guide ul li a.a1:active{
+	background: rgba(255,255,255,0.3);
+}
+div.guide ul li ul.u2{
+	display: none;
+	width: 100px;
+	z-index: 100;
+	list-style: none;
+	position:absolute;
+	top:32px;
+	left:-10px;
+}
+div.guide ul li ul.u1{
+	display: none;
+	width: 120px;
+	z-index: 100;
+	list-style: none;
+	position:absolute;
+	top:32px;
+	left:-160px;
+}
+div.guide ul li:hover ul{display: inline-block;}
+div.guide ul li ul li{
+	width:150px;
+	height:30px;
+	background:rgba(255,255,255,0.3);
+	border-bottom: 1px solid #eee;
+	border-radius: 15px;
+	cursor: pointer;  
+    transition: all 0.2s;
+}
+div.guide ul li ul li:hover{
+	background: rgba(255,255,255,0.6);
+	transform: scale(1.2);
+}
+div.guide ul li ul.u2 li{width:130px;}
+div.top1{
+	width:100%;
+	min-width: 1000px;
+	height:694px;
+	margin:70px auto 0;
+	text-align: center;
+	background: url(../img/background.jpg) no-repeat;
+	background-size: cover;
+}
+div.top1text{
+	text-align: center;
+	width:1000px;
+	margin:0 auto;
+	position: relative;
+	top: 150px;
+}
+div.top1text ul{
+	width:800px;
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	left:158px;
+	top:50px;
+}
+div.top1text ul li{
+	width:180px;
+	height:190px;
+	display: inline-block;
+	float:left;
+	margin-left:40px;
+}
+div.top1text ul li a{
+	width:180px;
+	height:190px;
+	display: inline-block;
+}
+a.a{
+	background: no-repeat url(../img/teacher1.png);
+}
+a.a:hover{
+	background: no-repeat url(../img/teacher2.png);
+}
+a.b{
+	background: no-repeat url(../img/student1.png);
+}
+a.b:hover{
+	background: no-repeat url(../img/student2.png);
+}

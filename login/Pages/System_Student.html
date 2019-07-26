@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Student page</title>
+	<link rel="shortcut icon" href="../Resources/img/nenulogo.png" type="image/x-icon" /> 
+	<link rel="stylesheet" href="../Resources/css/bootstrap/3.3.7/bootstrap.min.css">	
+	<link rel="stylesheet" href="../Resources/css/studentcss.css">
+	<script src="../Resources/js/jquery/2.1.4/jquery.min.js"></script>
+	<script src="../Resources/js/jquery/2.0.0/jquery.min.js"></script>
+	<link href="../Resources/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+	<script src="../Resources/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+	<!-- <link href="../Resources/css/default.css" rel="stylesheet" type="text/css" /> -->
+	<link rel="stylesheet" href="../Resources/css/reveal.css">	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+	<script type="text/javascript" src="../Resources/js/jquery.reveal.js"></script>
+		
+
+	<script src="../Resources/js/jquery.js" type="text/javascript"></script>
+
+	<script src="../Resources/js/raphael.js" type="text/javascript"></script>
+
+	<script src="../Resources/js/init.js" type="text/javascript"></script>
+	<script>
+        // jQuery
+        $(document).ready(function () {
+            $("#left-side-item1").click(function () {
+                $(".page1").show();// 显示
+                $(".page2").hide();// 隐藏
+                $(".page3").hide();
+                $(".page4").hide();
+                $(".wrong-pro").hide();
+            });
+            $("#left-side-item2").click(function () {
+                $(".page1").hide();
+                $(".page2").show();
+                $(".page3").hide();
+                $(".page4").hide();
+                $(".wrong-pro").hide();
+            });
+            $("#left-side-item3").click(function () {
+                $(".page1").hide();
+                $(".page2").hide();
+                $(".page3").show();
+                $(".page4").hide();
+                $(".wrong-pro").hide();
+            });
+            $("#left-side-item4").click(function () {
+                $(".page1").hide();
+                $(".page2").hide();
+                $(".page3").hide();
+                $(".page4").show();
+                $(".wrong-pro").hide();
+            });
+              $(".wrong-btn").click(function () {
+                $(".page1").hide();
+                $(".page2").hide();
+                $(".page3").hide();
+                $(".page4").hide();
+                $(".wrong-pro").show();
+            });
+        });
+    </script>
+    <script>
+        // jQuery
+        $(document).ready(function () {
+            $("#gap").click(function () {
+                $(".gapFilling").show();// 显示
+                $(".choiceQuestion").hide();// 隐藏
+                $(".answerQuestion").hide();
+            });
+            $("#choice").click(function () {
+                $(".gapFilling").hide();// 显示
+                $(".choiceQuestion").show();// 隐藏
+                $(".answerQuestion").hide();
+            });
+            $("#answer").click(function () {
+                $(".gapFilling").hide();// 显示
+                $(".choiceQuestion").hide();// 隐藏
+                $(".answerQuestion").show();
+            });
+        });
+    </script>
+    <script language="javascript"> 
+	    function submitPage() { 
+	        if (!confirm("确认要提交试卷吗？")) { 
+	            window.event.returnValue = false; 
+	        } 
+	    } 
+	</script>
+	<script language="javascript"> 
+	    function saveAnswer() { 
+	        if (!confirm("确认要保存答案吗？")) { 
+	            window.event.returnValue = false; 
+	        } 
+	    } 
+	</script>
+</head>
+<body>
+	<div class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<img src="../Resources/img/nenulogo.png" alt="" class="tlogoimg">
+			</div>
+			<div class="btn-group hello">
+			    <button type="button" class="btn btn-primary dropdown-toggle "  data-toggle="dropdown">
+			     你好，张三！
+			      <span class="caret"></span>         
+			    </button>
+			    <ul class="dropdown-menu" role="menu">
+			      <li>
+			         <a href="Index.html">退出登录</a>            
+			      </li>
+			      <li role="presentation">
+			         <a href="#">更多详情+</a>             
+			      </li>
+			    </ul>
+			</div>   
+	    </div>		
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+				<div class="list-group left-side">
+					<div href="" id="left-side-item1" class="list-group-item">个人主页</div>
+					<div href="" id="left-side-item2" class="list-group-item">在线考试</div>
+					<div href="" id="left-side-item3" class="list-group-item">成绩分析</div>
+					<div href="" id="left-side-item4" class="list-group-item">错题集</div>
+				</div>
+			</div>
+			<div class="col-sm-7">
+				<div class="page1">
+					<div class="panel panel-info">
+						<div class="panel-heading">学生信息
+							<a href="">
+								<img src="../Resources/img/check.png" alt="" class="checkimg">
+							</a>
+						</div>
+						<div class="panel-body">
+							<table class="table table-hover">
+								<tbody>
+									<tr>
+										<th>姓名：张三</th>
+										<th>性别：男</th>
+					
+									</tr>
+									<tr>
+										<th>联系方式：445655666</th>
+										<th>邮箱：6666666666@163.com</th>
+										
+									</tr>
+									<tr>
+										<th>注册时间：2012年9月1日</th>
+										<th>更多信息：无</th>									
+									</tr>
+							</table>
+						</div>
+					</div>
+					<div class="panel panel-info">
+						<div class="panel-heading">成绩信息
+							<a href="">
+								<img src="../Resources/img/copy.png" alt="" class="checkimg">
+							</a>
+						</div>
+						<div class="panel-body">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>科目</th>
+										<th>成绩</th>
+										<th>考试时间</th>
+										<th>任课教师</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>走进软件</th>
+										<th>88</th>
+										<th>2018年12月21日</th>								
+										<th>刘志勇</th>
+									</tr>
+									<tr>
+										<th>计算机导论</th>
+										<th>88</th>
+										<th>2018年12月21日</th>
+										<th>张日明</th>
+									</tr>
+									<tr>
+										<th>高数（上）</th>
+										<th>92</th>
+										<th>2018年12月21日</th>
+										<th>孙佳宁</th>
+									</tr>
+									<tr>
+										<th>C语言程序设计</th>
+										<th>80</th>
+										<th>2018年12月21日</th>								
+										<th>封子军</th>
+									</tr>
+									<tr>
+										<th>线性代数</th>
+										<th>72</th>
+										<th>2018年12月21日</th>								
+										<th>张友</th>
+									</tr>
+									<tr>
+										<th>大学英语</th>
+										<th>71</th>
+										<th>2018年12月21日</th>								
+										<th>王爽</th>
+									</tr>
+									<tr>
+										<th>思想道德与法律基础</th>
+										<th>85</th>
+										<th>2018年12月21日</th>								
+										<th>张三</th>
+									</tr>
+									<tr>
+										<th>军事理论</th>
+										<th>88</th>
+										<th>2018年12月21日</th>								
+										<th>李四</th>
+									</tr>
+									<tr>
+										<th>体育</th>
+										<th>88</th>
+										<th>2018年12月21日</th>								
+										<th>杨洋</th>
+									</tr>
+									
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="page2" style="display: none;">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>科目</th>
+								<th>试卷名称</th>
+								<th>考试时长</th>
+								<th>截止时间</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>高数</th>
+								<th>第九章测试</th>
+								<th>90分钟</th>
+								<th>2019.06.30</th>
+								<th>
+									<a class="btn btn-primary btn-xs exampage"  data-reveal-id="myModal">开始考试</a>
+								</th>
+							</tr>
+							<tr>
+								<th>离散</th>
+								<th>第一章测试</th>
+								<th>90分钟</th>
+								<th>2019.06.30</th>
+								<th>
+									<a class="btn btn-primary btn-xs exampage"  data-reveal-id="myModal">开始考试</a>
+								</th>
+							</tr>
+							<tr>
+								<th>数电</th>
+								<th>第一章测试</th>
+								<th>90分钟</th>
+								<th>2019.06.30</th>
+								<th>
+									<a class="btn btn-primary btn-xs exampage"  data-reveal-id="myModal">开始考试</a>
+								</th>
+							</tr>
+							<tr>
+								<th>数电</th>
+								<th>第二章测试</th>
+								<th>90分钟</th>
+								<th>2019.06.30</th>
+								<th>
+									<a class="btn btn-primary btn-xs exampage"  data-reveal-id="myModal">开始考试</a>
+								</th>
+							</tr>
+							<tr>
+								<th>高数</th>
+								<th>第二章测试</th>
+								<th>90分钟</th>
+								<th>2019.06.30</th>
+								<th>
+									<a class="btn btn-primary btn-xs exampage"  data-reveal-id="myModal">开始考试</a>
+								</th>
+							</tr>
+							<tr>
+								<th>高数</th>
+								<th>第十章测试</th>
+								<th>90分钟</th>
+								<th>2019.07.20</th>
+								<th>
+									<a class="btn btn-primary btn-xs exampage"  data-reveal-id="myModal">开始考试</a>
+								</th>
+							</tr>
+							<tr>
+								<th>高数</th>
+								<th>第十一章测试</th>
+								<th>90分钟</th>
+								<th>2019.07.10</th>
+								<th>
+									<a class="btn btn-primary btn-xs exampage"  data-reveal-id="myModal">开始考试</a>
+								</th>
+							</tr>
+							<tr>
+								<th>一体化前端</th>
+								<th>第一次测试</th>
+								<th>90分钟</th>
+								<th>2019.07.10</th>
+								<th>
+									<a class="btn btn-primary btn-xs exampage"  data-reveal-id="myModal">开始考试</a>
+								</th>
+							</tr>
+							<tr>
+								<th>一体化前端</th>
+								<th>第二次测试</th>
+								<th>90分钟</th>
+								<th>2019.07.10</th>
+								<th>
+									<a class="btn btn-primary btn-xs exampage"  data-reveal-id="myModal">开始考试</a>
+								</th>
+							</tr>
+							<tr>
+								<th>Java</th>
+								<th>第一章测试</th>
+								<th>90分钟</th>
+								<th>2019.07.10</th>
+								<th>
+									<a class="btn btn-primary btn-xs exampage"  data-reveal-id="myModal">开始考试</a>
+								</th>
+							</tr>
+							<tr>
+								<th>数电</th>
+								<th>第三章测试</th>
+								<th>90分钟</th>
+								<th>2019.07.10</th>
+								<th>
+									<a class="btn btn-primary btn-xs exampage"  data-reveal-id="myModal">开始考试</a>
+								</th>
+							</tr>
+							<tr>
+								<th>Java</th>
+								<th>第二章测试</th>
+								<th>90分钟</th>
+								<th>2019.07.20</th>
+								<th>
+									<a class="btn btn-primary btn-xs exampage"  data-reveal-id="myModal">开始考试</a>
+								</th>
+							</tr>
+							<tr>
+								<th>Java</th>
+								<th>第三章测试</th>
+								<th>90分钟</th>
+								<th>2019.07.20</th>
+								<th>
+									<a class="btn btn-primary btn-xs exampage"  data-reveal-id="myModal">开始考试</a>
+								</th>
+							</tr>
+							<tr>
+								<th>高数</th>
+								<th>第十二章测试</th>
+								<th>90分钟</th>
+								<th>2019.07.20</th>
+								<th>
+									<a class="btn btn-primary btn-xs exampage"  data-reveal-id="myModal">开始考试</a>
+								</th>
+							</tr>
+							<tr>
+								<th>一体化前端</th>
+								<th>第三次测试</th>
+								<th>90分钟</th>
+								<th>2019.07.20</th>
+								<th>
+									<a class="btn btn-primary btn-xs exampage"  data-reveal-id="myModal">开始考试</a>
+								</th>
+							</tr>
+					</table>
+				</div>
+				
+				<div id="myModal" class="reveal-modal">
+					<h2>考试须知</h2>
+					<p>1. 考试时间为100分钟，请您注意时间。</p>
+					<p>2. 考试过程中请勿刷新网页或关闭网页，否则答题无效。</p>
+					<p>3. 请注意，考试次数仅有一次。</p>
+					<a href="Exam_Page.html" class="begin-exam">开始考试</a>
+					<a class="close-reveal-modal">&#215;</a>
+				</div>
+
+				<div class="page3" style="display: none;">
+					<h4 class="beat">成绩击败人数百分比</h4>
+					<div style="text-align:center;clear:both">
+						<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+						<script src="/follow.js" type="text/javascript"></script>
+					</div>
+
+					<div id="content" style="width: 500px; height: 500px;">
+						<div id="diagram"></div>
+					</div>
+
+					<div class="get" style="display: none;">
+						<div class="arc">
+							<span class="text">高等数学(下)</span>
+							<input type="hidden" class="percent" value="95" />
+							<input type="hidden" class="color" value="#97BE0D" />
+						</div>
+						<div class="arc">
+							<span class="text">数字电路技术</span>
+							<input type="hidden" class="percent" value="90" />
+							<input type="hidden" class="color" value="#D84F5F" />
+						</div>
+						<div class="arc">
+							<span class="text">综合成绩</span>
+							<input type="hidden" class="percent" value="80" />
+							<input type="hidden" class="color" value="#88B8E6" />
+						</div>
+						<div class="arc">
+							<span class="text">Java程序设计</span>
+							<input type="hidden" class="percent" value="53" />
+							<input type="hidden" class="color" value="#BEDBE9" />
+						</div>
+						<div class="arc">
+							<span class="text">大学英语</span>
+							<input type="hidden" class="percent" value="45" />
+							<input type="hidden" class="color" value="#EDEBEE" />
+						</div>
+					</div>
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingOne">
+					      <h4 class="panel-title">
+					        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+					          弱势学科
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+					      <div class="panel-body">
+					       由成绩击败人数百分比图，可以看出您<span style="color: red;">英语</span>成绩相对较低，我们将不定时为您推荐英语方面相关课程与试题，帮助您提高成绩。
+					      </div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingTwo">
+					      <h4 class="panel-title">
+					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					          强势学科
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					      <div class="panel-body">
+							继续保持，加油！
+					      </div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingThree">
+					      <h4 class="panel-title">
+					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					          综合成绩分析
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+					      <div class="panel-body">
+					       您的综合成绩已击败80%的同学，希望您继续提高<span style="color: red;">英语</span>，<span style="color: red;">Java程序设计</span>的成绩，继续加油！
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+				</div>
+				<div class="page4" style="display: none;">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>科目</th>
+								<th>试卷名称</th>
+								<th>试卷难度</th>
+								<th>上传时间</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>高数</th>
+								<th>第九章测试</th>
+								<th>**</th>
+								<th>2019.06.30</th>
+								<th>
+									<div class="btn btn-primary btn-xs wrong-btn">查看错题</div>
+								</th>
+							</tr>
+							<tr>
+								<th>离散</th>
+								<th>第一章测试</th>
+								<th>**</th>
+								<th>2019.06.30</th>
+								<th>
+									<div class="btn btn-primary btn-xs wrong-btn">查看错题</div>
+								</th>
+							</tr>
+							<tr>
+								<th>离散</th>
+								<th>第二章测试</th>
+								<th>***</th>
+								<th>2019.06.30</th>
+								<th>
+									<div class="btn btn-primary btn-xs wrong-btn">查看错题</div>
+								</th>
+							</tr>
+							<tr>
+								<th>高数</th>
+								<th>第十章测试</th>
+								<th>***</th>
+								<th>2019.06.30</th>
+								<th>
+									<div class="btn btn-primary btn-xs wrong-btn">查看错题</div>
+								</th>
+							</tr>
+							<tr>
+								<th>高数</th>
+								<th>第十一章测试</th>
+								<th>****</th>
+								<th>2019.06.30</th>
+								<th>
+									<div class="btn btn-primary btn-xs wrong-btn">查看错题</div>
+								</th>
+							</tr>
+							<tr>
+								<th>数电</th>
+								<th>第一章测试</th>
+								<th>**</th>
+								<th>2019.07.10</th>
+								<th>
+									<div class="btn btn-primary btn-xs wrong-btn">查看错题</div>
+								</th>
+							</tr>
+							<tr>
+								<th>数电</th>
+								<th>第二章测试</th>
+								<th>***</th>
+								<th>2019.07.10</th>
+								<th>
+									<div class="btn btn-primary btn-xs wrong-btn">查看错题</div>
+								</th>
+							</tr>
+							<tr>
+								<th>一体化前端</th>
+								<th>第一次测试</th>
+								<th>***</th>
+								<th>2019.07.10</th>
+								<th>
+									<div class="btn btn-primary btn-xs wrong-btn">查看错题</div>
+								</th>
+							</tr>
+							<tr>
+								<th>Java</th>
+								<th>第一章测试</th>
+								<th>*</th>
+								<th>2019.07.10</th>
+								<th>
+									<div class="btn btn-primary btn-xs wrong-btn">查看错题</div>
+								</th>
+							</tr>
+							<tr>
+								<th>数电</th>
+								<th>第三章测试</th>
+								<th>****</th>
+								<th>2019.07.10</th>
+								<th>
+									<div class="btn btn-primary btn-xs wrong-btn">查看错题</div>
+								</th>
+							</tr>
+							<tr>
+								<th>高数</th>
+								<th>第十二章测试</th>
+								<th>*****</th>
+								<th>2019.07.10</th>
+								<th>
+									<div class="btn btn-primary btn-xs wrong-btn">查看错题</div>
+								</th>
+							</tr>
+							<tr>
+								<th>Java</th>
+								<th>第二章测试</th>
+								<th>****</th>
+								<th>2019.07.10</th>
+								<th>
+									<div class="btn btn-primary btn-xs wrong-btn">查看错题</div>
+								</th>
+							</tr>
+							<tr>
+								<th>一体化前端</th>
+								<th>第三次测试</th>
+								<th>****</th>
+								<th>2019.07.20</th>
+								<th>
+									<div class="btn btn-primary btn-xs wrong-btn">查看错题</div>	
+								</th>
+							</tr>
+							<tr>
+								<th>离散</th>
+								<th>第二章测试</th>
+								<th>***</th>
+								<th>2019.07.20</th>
+								<th>
+									<div class="btn btn-primary btn-xs wrong-btn">查看错题</div>
+								</th>
+							</tr>
+							<tr>
+								<th>Java</th>
+								<th>第三章测试</th>
+								<th>*****</th>
+								<th>2019.07.20</th>
+								<th>
+									<div class="btn btn-primary btn-xs wrong-btn">查看错题</div>
+								</th>
+							</tr>
+					</table>
+				</div>
+				<div class="wrong-pro" style="display: none;">
+					<div class="btn-group problemkinds" data-toggle="buttons">
+					  <label class="btn btn-default active" id="gap">
+					    <input type="radio" checked>填空题
+					  </label>
+					  <label class="btn btn-default" id="choice">
+					    <input type="radio"> 选择题
+					  </label>
+					  <label class="btn btn-default" id="answer">
+					    <input type="radio"> 简答题
+					  </label>
+					</div>
+					<div class="gapFilling">
+						<div class="panel panel-default">
+							<div class="panel-heading">问题一：函数Y=AB+AC有3个输入变量，则Y 的最小项表达式为______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题一：函数Y=AB+AC有3个输入变量，则Y 的最小项表达式为______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div>
+						    		</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div>
+						    		</div>
+								</div>
+							</div>
+						</div>						
+						<div class="panel panel-default">
+							<div class="panel-heading">问题三：将十进制数287转换成二进制数是______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题三：将十进制数287转换成二进制数是______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div>
+						    		</div>
+								</div>
+							</div>
+						</div>						
+						<div class="panel panel-default">
+							<div class="panel-heading">问题四：把高电压作为逻辑1，低电平作为逻辑0的赋值方法称作______逻辑赋值。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题四：把高电压作为逻辑1，低电平作为逻辑0的赋值方法称作______逻辑赋值。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div>
+						    		</div>
+								</div>
+							</div>
+						</div>						
+						<div class="panel panel-default">
+							<div class="panel-heading">问题五:四位二进制编码器有______个输入端。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题五:四位二进制编码器有______个输入端。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div>
+						    		</div>
+								</div>
+							</div>
+						</div>	
+						<div class="panel panel-default">
+							<div class="panel-heading">问题六：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题六：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div>
+						    		</div>
+								</div>
+							</div>
+						</div>										
+					</div>
+					<div class="choiceQuestion" style="display: none;">
+						<div class="list-group">
+							<div type="button" class="list-group-item active">
+							    问题一：同步时序电路和异步时序电路比较，其差异在于后者(  )。
+							    <button type="button" class="btn btn-success submitButton" onclick="saveAnswer()">保存答案</button>
+							</div>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro1">
+							A ．0000
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro1">
+							B ．1010
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro1">
+							C ．0101
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro1">
+							D ．1111
+							</button>
+						</div>
+						<div class="list-group">
+							<div type="button" class="list-group-item active" >
+							    问题二：下列电路中，不属于组合逻辑电路的是(  )。
+							    <button type="button" class="btn btn-success submitButton" onclick="saveAnswer()">保存答案</button>
+							</div>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro2">
+							A ．译码器
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro2">
+							B ．全加器
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro2">
+							C ．寄存器
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro2">
+							D ．编码器
+							</button>
+						</div>
+						<div class="list-group">
+							<div type="button" class="list-group-item active">
+							    问题三：同步时序电路和异步时序电路比较，其差异在于后者(  )
+							    <button type="button" class="btn btn-success submitButton" onclick="saveAnswer()">保存答案</button>
+							</div>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro3">
+							A ．没有触发器
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro3">
+							B ．没有统一的时钟脉冲控制
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro3">
+							C ．没有稳定状态
+							</button>
+							<button type="button" class="list-group-item">
+								<input type="radio" name="pro3">
+							D ．输出只与内部状态有关
+							</button>
+						</div>
+					</div>
+					<div class="answerQuestion" style="display: none;">
+						<div class="panel panel-default">
+							<div class="panel-heading">问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div><!-- /.modal-content -->
+						    		</div><!-- /.modal-dialog -->
+								</div>
+							</div>
+						</div>				
+						<div class="panel panel-default">
+							<div class="panel-heading">问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div><!-- /.modal-content -->
+						    		</div><!-- /.modal-dialog -->
+								</div>
+							</div>
+						</div>				
+						<div class="panel panel-default">
+							<div class="panel-heading">问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div><!-- /.modal-content -->
+						    		</div><!-- /.modal-dialog -->
+								</div>
+							</div>
+						</div>				
+						<div class="panel panel-default">
+							<div class="panel-heading">问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div><!-- /.modal-content -->
+						    		</div><!-- /.modal-dialog -->
+								</div>
+							</div>
+						</div>				
+						<div class="panel panel-default">
+							<div class="panel-heading">问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</div>
+							<div class="panel-body">
+							    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							        回答
+							    </button>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog">
+						       			<div class="modal-content">
+							       			<div class="modal-header">
+							            		<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							            		<h4 class="modal-title">提问</h4>
+							          		</div>
+							          		<div class="modal-body">
+							            		<p>问题二：一种电路若在正逻辑赋值时为与非门，则在负逻辑赋值时为______。</p>
+							            		<textarea class="form-control"></textarea>
+							        		</div>
+							        		<div class="modal-footer">
+							            		<button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+							            		<button class="btn btn-primary" type="button">保存答案</button>
+							       			</div>
+						        		</div><!-- /.modal-content -->
+						    		</div><!-- /.modal-dialog -->
+								</div>
+							</div>
+						</div>				
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="side-bar-card1" clearfix>
+					<div class="col-xs-5">
+						<img src="../Resources/img/12377.png" class="report">
+					</div>
+					<div class="col-xs-7">
+						<div class="text1">有害信息举报专区</div>
+						<div>举报电话：12377</div>
+					</div>
+					<div class="card-title"></div>
+				</div>
+				<div class="side-bar-card card2">
+					<div class="card-title">试卷推荐</div>
+					<div class="card-body">
+						<div class="list">
+							<div class="item">
+								<div class="text-title">东北师范大学信息科学与技术学院2018学年春季学期计算机导论第三章测试题</div>
+								<div class="desc">15k阅读 1k评论</div>
+							</div>
+							<div class="item">
+								<div class="text-title">东北师范大学信息科学与技术学院2018学年春季学期计算机导论第三章测试题</div>
+								<div class="desc">15k阅读 1k评论</div>
+							</div>
+							<div class="item">
+								<div class="text-title">东北师范大学信息科学与技术学院2018学年春季学期计算机导论第三章测试题</div>
+								<div class="desc">15k阅读 1k评论</div>
+							</div>
+							<div class="item">
+								<div class="text-title">东北师范大学信息科学与技术学院2018学年春季学期计算机导论第三章测试题</div>
+								<div class="desc">15k阅读 1k评论</div>
+							</div>
+							<div class="item">
+								<div class="text-title">东北师范大学信息科学与技术学院2018学年春季学期计算机导论第三章测试题</div>
+								<div class="desc">15k阅读 1k评论</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">	
+		<img src="../Resources/img/nenulogo.png" alt="" class="T">
+		<div class="contact">
+			<div class="phone">
+				<img src="../Resources/img/phone.png" alt="">
+				<span class="phonenumber">6666-6666-666</span>
+			</div>
+			<div class="com">
+				<img src="../Resources/img/email.png" alt="">
+				<span class="comnumber">webmaster@nenu.edu.cn</span>
+			</div>
+			<div class="add">
+				<img src="../Resources/img/add.png" alt="">
+				<span class="comnumber">吉林省长春市南关区人民大街5268号（130024）</span>
+			</div>
+		</div>
+		<div class="information">	
+			<div>COPYRIGHT © 2004-2010</div>
+			<br>	
+			<div>网站建设：软件工程一体化小组</div>
+			<br>	
+			<div>版权所有©东北师范大学 吉ICP备05004942</div>
+			<br>	
+			<div>维护：信息化管理与规划办公室</div>
+		</div>
+	</div>
+</body>
+</html>

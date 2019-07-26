@@ -1,0 +1,247 @@
+﻿body{
+	margin:0;
+	min-width: 1400px;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+div.guide{
+	width:100%;
+	min-width: 1000px;
+	margin:0 auto;
+	height:70px;
+	background: #5d819dc9;
+	position: fixed;
+	z-index: 1;
+	top:0px;
+	left: 0px;
+	text-align: center;
+}
+div.guide ul{
+	width:500px;
+	font-size:14px;
+	color:#000;
+	display: inline-block;
+	margin-left: 210px;
+	position: relative;
+	bottom: 3px;
+	right:15%;
+	top: 10px;
+	float: right;
+}
+div.guide ul li{
+	margin:10px;
+	text-align: center;
+	list-style: none;
+	float: left;
+}
+div.guide ul a{
+	height:24px;
+	display: inline-block;
+	padding-top: 5px;
+	border-radius: 15px;
+	cursor:pointer;
+	color:#FFF;
+}
+a.a1{
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+}
+div.guide ul li a.a1:hover{
+	background: rgba(255,255,255,0.3);
+}
+div.guide ul li a.a1:active{
+	background: rgba(255,255,255,0.3);
+}
+div.guide ul li ul.u2{
+	display: none;
+	width: 100px;
+	z-index: 100;
+	list-style: none;
+	position:absolute;
+	top:32px;
+	left:-10px;
+}
+div.guide ul li ul.u1{
+	display: none;
+	width: 120px;
+	z-index: 100;
+	list-style: none;
+	position:absolute;
+	top:32px;
+	left:-160px;
+}
+div.guide ul li:hover ul{display: inline-block;}
+div.guide ul li ul li{
+	width:150px;
+	height:30px;
+	background:rgba(255,255,255,0.3);
+	border-bottom: 1px solid #eee;
+	border-radius: 15px;
+	cursor: pointer;  
+    transition: all 0.2s;
+}
+div.guide ul li ul li:hover{
+	background: rgba(255,255,255,0.6);
+	transform: scale(1.2);
+}
+div.guide ul li ul.u2 li{width:130px;}
+
+
+
+.info {
+	padding-top: 100px;
+	width: 100%;
+	background-color:#eee;
+	background-image: url(../img/background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 50px;
+}
+.info .zhuce{
+	font-size: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-right: 20%;
+	margin-left: 20%;
+	color: #FFF;
+}
+.info .teacher {
+	text-align: right;
+	padding-right: 21%;
+	color: #FFF;
+}
+.info .tianru {
+	margin-left:20%;
+	margin-right:20%;
+	margin-top: 10px;
+}
+.xinxi {
+	margin-left:30px;
+	margin-top:20px;
+	overflow:hidden;
+	float: left;
+	width: 50%;
+}
+.xinxi .term {
+	color: #666666;
+	text-decoration: underline;
+}
+.account{
+	float: left;
+	justify-content: center;
+	padding-left:10%;
+	padding-top: 150px;
+	overflow:hidden;
+
+}
+.account .mass{
+	text-align:center;
+	width: 255px;
+	font-size: 17px;
+}
+.account .log{
+	padding-top: 170px;
+	font-size: 18px;
+	text-align: center;
+}
+.account .log .in{
+	font-size: 18px;
+	color: #36F;
+}
+
+.info .teacher .link {
+	color: #0FF;
+}
+
+.footer{
+	width: 100%;
+	height: 200px;
+	background-color: #eaeaea;
+	padding-top: 30px;
+	/*position: absolute;*/
+	/*top: 900px;*/
+	margin: 0 auto;
+}
+
+.T{
+	float: left;
+	width: 350px;
+	height: 100px;
+	margin-top: 20px;
+	margin-left: 120px;
+	border-radius: 30px;
+}
+
+.contact{
+	float: left;
+	margin-left: 150px;
+	width: 35%;
+	height: 100%;
+	/*margin-top: 20px;*/
+}
+
+.contact>div{
+	width: 100%;
+	height: 50px;
+	margin-right: 50px;
+}
+
+.contact>div>img{
+	height: 30px;
+	width: 30px;
+	border-radius: 200px;
+	position: relative;
+}
+
+.contact>div>img:hover{
+	height: 30px;
+	width: 30px;
+	cursor:pointer;
+	border-radius: 200px;
+	background-color: #0e6281;
+	transition-duration: 0.5s;
+}
+
+.contact>div>span{
+	margin-left: 10px;
+	line-height: 50px;
+}
+
+.aboutus,.help{
+	width: 100px;
+	height: 40px;
+	border: 3px solid #999;
+	background-color: #c9c7c7;
+	border-radius: 20px;
+	color: #6a6666;
+	position: absolute;
+	
+	text-align: center;
+	line-height: 40px;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.aboutus{
+	right: 240px;
+	top: 25px;
+}
+
+.help{
+	right: 240px;
+	top: 110px;
+}
+.aboutus:hover,.help:hover{
+	color: #000;
+	border: 3px solid #000;
+	background-color: #666;
+	transition-duration: 0.5s;
+	cursor:pointer;
+}
+/*-------------------------------底部         over-------------------------------*/
+.information{
+	margin-right: 50px;
+}
